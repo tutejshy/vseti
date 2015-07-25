@@ -11,31 +11,31 @@ if(!class_exists('langpack')){
 		
 		function dln($digit, $k){			
 			$en = array( // 1 3 12
-				'zap' => array('ь','и','ей'),
+				'zap' => array('ь','і','ей'),
 				'gst' => array('ь','я','ей'),
 				'com' => array('й','я','ев'), 
 				'file'=> array('','а','ов'),
 				'grp' => array('е','ах','ах'),
 				'grp2'=> array('а','ы',''),
 				'cnt' => array('','a',''),
-				'lst' => array('яя','ие','их'),
-				'pht' => array('ю','и','й'),
+				'lst' => array('яя','іе','іх'),
+				'pht' => array('ю','і','й'),
 				'pht2' => array('я','и','й'),
 				'frn' => array('га','зей','зей'),
 				'frn2' => array('г','га','зей'),
 				'inv' => array('е','я','й'),
-				'ord' => array('ка','ки','ок'),
+				'ord' => array('ка','кі','ок'),
 				'evt' => array('e','я','й'),
 				'ev2' => array('и','ях','ях'),
 				'pvt' => array('ое','ых','ых'),
 				'pvm' => array('ый','ых','ых'),
 				'gft' => array('ок','ка','ов'),
 				'sec' => array('у','ы',''),
-				'hum' => array('человеку','людям','людям'),
+				'hum' => array('чалавеку','людзям','людзям'),
 				'ext' => array('й','х','х'),
-				'vot' => array('','и','и'),
+				'vot' => array('','і','і'),
 				'shw' => array('а','о','о'),
-				'hmd' => array('человеку','людям','людям'),
+				'hmd' => array('чалавеку','людзям','людзям'),
 			);
 			if(is_array($k)) {
 				$expr = $k;
@@ -99,46 +99,46 @@ if(!class_exists('langpack')){
 		
 		function photos($n){
 			$n = $n%100;
-			if($n == 1) return "ия";
-			if($n == 2 or $n == 3 or $n == 4) return "ии";
+			if($n == 1) return "ія";
+			if($n == 2 or $n == 3 or $n == 4) return "іі";
 			return "ий";
 		}
 		
 		function photos2($n){
 			$n = $n%100;
-			if($n == 1) return "ию";
-			if($n == 2 or $n == 3 or $n == 4) return "ии";
-			return "ий";
+			if($n == 1) return "ію";
+			if($n == 2 or $n == 3 or $n == 4) return "іі";
+			return "ій";
 		}
 		
 		function humans($n1){
 			$n = $n1%10;
-			if($n == 1 or ($n1>4 and $n1<22)) return "человек";
-			if($n == 2 or $n == 3 or $n == 4) return "человека";
-			return "человек";
+			if($n == 1 or ($n1>4 and $n1<22)) return "чалавек";
+			if($n == 2 or $n == 3 or $n == 4) return "чалавека";
+			return "чалавек";
 		}
 		
 		function rget($n){
 			$n = $n%10;
-			if($n == 1) return "подал";
-			if($n == 2 or $n == 3 or $n == 4) return "подали";
-			return "подало";
+			if($n == 1) return "падаў";
+			if($n == 2 or $n == 3 or $n == 4) return "падалі";
+			return "падала";
 		}
 		
 		function years($n){
 			if($n<4 or $n>20){
 				$n = $n%10;
 				if($n == 1) return "год";
-				if($n == 2 or $n == 3 or $n == 4) return "года";
+				if($n == 2 or $n == 3 or $n == 4) return "гады";
 			}
-			return "лет";
+			return "гадоў";
 		}
 		
 		function books($n){
 			if($n<4 or $n>20){
 				$n = $n%10;
 				if($n == 1) return "a";
-				if($n == 2 or $n == 3 or $n == 4) return "и";
+				if($n == 2 or $n == 3 or $n == 4) return "і";
 			}
 		}
 	}
@@ -146,22 +146,22 @@ if(!class_exists('langpack')){
 	$langpack = new langpack;
 }
 
-$class_datetime[1] = "сек. назад";
-$class_datetime[2] = "мин. назад";
-$class_datetime[3] = "час. назад";
-$class_datetime[4] = "дн. назад";
-$class_datetime[5] = "нед. назад";
-$class_datetime[6] = "мес. назад";
-$class_datetime[7] = "лет назад";
-$class_datetime[8] = "Вчера";
-$class_datetime[9] = "Сегодня";
-$class_datetime[10] = "Завтра";
+$class_datetime[1] = "сек. таму";
+$class_datetime[2] = "хв. таму";
+$class_datetime[3] = "гадз. таму";
+$class_datetime[4] = "дз. таму";
+$class_datetime[5] = "тыд. таму";
+$class_datetime[6] = "мес. таму";
+$class_datetime[7] = "гадоў таму";
+$class_datetime[8] = "Учора";
+$class_datetime[9] = "Сёння";
+$class_datetime[10] = "Заўтра";
 
 
-$class_upload[1] = "Сбой при загрузке. Пожалуйста, попробуйте еще раз. Если эта проблема не исчезнет, обратитесь к администратору за помощью.";
-$class_upload[2] = "Размер загружаемого файла превышает максимально допустимый размер.";
-$class_upload[3] = "Данный тип файла не допускается.";
-$class_upload[4] = "Размеры Вашего изображение превышают максимально допустимую ширину и высоту.";
+$class_upload[1] = "Збой пры загрузке. Калі ласка, паспрабуйце яшчэ раз. Калі праблема не знікне, звярніцеся да адміністратара за дапамогай.";
+$class_upload[2] = "Памер загружанага файлу перавышае максімальна дапушчальны памер.";
+$class_upload[3] = "Дыдзены тып файлу не дапускаецца.";
+$class_upload[4] = "Памеры Вашай выявы перавышаюць максімальна дапушчальную шырыню і вышыню.";
 
 $class_user[1] = "По умолчанию";
 $class_user[2] = "Ваш браузер не поддерживает Javascript. Пожалуйста, включите Javascript и попробуйте еще раз.";
